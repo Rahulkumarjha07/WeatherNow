@@ -1,12 +1,15 @@
 import SearchBox from './SearchBox';
+import InfoBox from './InfoBox.jsx';
 
 
 function App() {
   
 
   return (
-    
-    <SearchBox />
+    <div>
+        <SearchBox />
+    <InfoBox />
+    </div>
   );
 }
 
