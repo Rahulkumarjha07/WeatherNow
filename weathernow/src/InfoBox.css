@@ -1,6 +1,6 @@
 .weather-ui {
     margin-top: 10px;
-    color: #111;   /* ✅ fixed */
+    color: #111;   
 }
 
 /* Top */
@@ -14,9 +14,9 @@
     font-size: 14px;
 }
 
-/* Temperature (FIXED) */
+
 .temp-section h1 {
-    font-size: 65px;   /* ✅ reduced */
+    font-size: 65px;   
     font-weight: 300;
     margin: 5px 0;
 }
@@ -31,7 +31,7 @@
 
 /* Card style (LIGHT THEME FIX) */
 .card {
-    background: #f1f5f9;   /* ✅ clean light */
+    background: #f1f5f9;   
     border-radius: 12px;
     padding: 10px;
     text-align: center;

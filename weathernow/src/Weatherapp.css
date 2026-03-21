@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* App background */
+
 .app {
     min-height: 100vh;
     display: flex;
@@ -19,13 +19,13 @@
     color: #111;
 }
 
-/* Dark mode */
+
 .app.dark {
     background: linear-gradient(to top, #000000, #434343);
     color: white;
 }
 
-/* MAIN CARD */
+
 .main-card {
     width: 100%;
     max-width: 500px;
@@ -39,7 +39,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Toggle */
+
 .toggle-btn {
     position: fixed;
     top: 15px;
@@ -54,14 +54,14 @@
     color: white;
 }
 
-/* ================= INFOBOX ================= */
 
-/* Weather UI */
+
+
 .weather-ui {
     margin-top: 10px;
 }
 
-/* Top */
+
 .top h2 {
     font-size: 20px;
 }
@@ -71,19 +71,19 @@
     opacity: 0.7;
 }
 
-/* Temp */
+
 .temp-section h1 {
     font-size: 50px;
     margin: 5px 0;
 }
 
-/* Bottom grid */
+
 .bottom {
     display: grid;
     gap: 10px;
     margin-top: 15px;
 
-    /* 🔥 AUTO RESPONSIVE GRID */
+    
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
@@ -102,7 +102,7 @@
     font-size: 14px;
 }
 
-/* ================= SEARCH ================= */
+
 
 .search-container {
     margin-bottom: 20px;
@@ -119,12 +119,7 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* REMOVE THIS (IMPORTANT ❌) */
-/* input {} */
-/* button {} */
-/* form button {} */
 
-/* ================= MOBILE ================= */
 
 @media (max-width: 500px) {
 
@@ -141,11 +136,11 @@
     }
 
     .bottom {
-        grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on mobile */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* ================= TABLET ================= */
+
 
 @media (min-width: 501px) and (max-width: 900px) {
     .main-card {
