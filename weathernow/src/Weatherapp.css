@@ -10,9 +10,9 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 20px;
+    padding: 80px 15px 20px;
 
     background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
     font-family: Arial, sans-serif;
@@ -27,9 +27,9 @@
 
 /* MAIN CARD */
 .main-card {
-    width: 500px;
-    max-width: 100%;
-    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.9);
@@ -37,85 +37,118 @@
 
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
-    transition: 0.3s ease;
 }
 
-/* Title */
-.main-card h2 {
-    margin-bottom: 5px;
-    font-size: 24px;
-}
-
-/* Subtitle */
-.subtitle {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-/* Toggle button */
+/* Toggle */
 .toggle-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
 
-    padding: 8px 14px;
-    border-radius: 10px;
+    padding: 8px 12px;
+    border-radius: 20px;
     border: none;
-    cursor: pointer;
 
     background: #4facfe;
     color: white;
 }
 
-/* Weather section */
-.weather-section {
-    margin-top: 12px;
+/* ================= INFOBOX ================= */
+
+/* Weather UI */
+.weather-ui {
+    margin-top: 10px;
 }
 
-/* ========================= */
-/* 📱 MOBILE (0–500px) */
-/* ========================= */
+/* Top */
+.top h2 {
+    font-size: 20px;
+}
+
+.condition {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* Temp */
+.temp-section h1 {
+    font-size: 50px;
+    margin: 5px 0;
+}
+
+/* Bottom grid */
+.bottom {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+
+    /* 🔥 AUTO RESPONSIVE GRID */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* Cards */
+.card {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card p {
+    font-size: 11px;
+}
+
+.card h3 {
+    font-size: 14px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* REMOVE THIS (IMPORTANT ❌) */
+/* input {} */
+/* button {} */
+/* form button {} */
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 500px) {
 
     .app {
-        padding: 10px;
-        align-items: flex-start;
+        padding: 70px 10px;
     }
 
     .main-card {
-        width: 100%;
         padding: 15px;
-        border-radius: 15px;
     }
 
-    .main-card h2 {
-        font-size: 20px;
+    .temp-section h1 {
+        font-size: 40px;
     }
 
-    .subtitle {
-        font-size: 12px;
+    .bottom {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on mobile */
     }
 }
 
-/* ========================= */
-/* 📲 TABLET (501–900px) */
-/* ========================= */
+/* ================= TABLET ================= */
+
 @media (min-width: 501px) and (max-width: 900px) {
-
     .main-card {
-        width: 80%;
-        padding: 20px;
-    }
-}
-
-/* ========================= */
-/* 💻 DESKTOP (901px+) */
-/* ========================= */
-@media (min-width: 901px) {
-
-    .main-card {
-        width: 520px;
+        max-width: 420px;
     }
 }
