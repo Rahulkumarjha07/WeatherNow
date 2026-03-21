@@ -1,53 +1,48 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import "./InfoBox.css";
 
-export default function InfoBox() {
-
-    let information = {
-        city: "delhi",
-        feelsLike: 24.2,
-        temp: 25.5,
-        tempmax: 35,
-        tempmin: 20,
-        humidity: 27,
-        weather: "Haze",
-    };
+export default function InfoBox({ information }) {
 
     return (
-        <div className="InfoBox">
-          
-           
+        <div className="weather-ui">
 
-            <Card  className="weatherCard">
-                <CardMedia
-                    sx={{ height: 140 }}
-                    image="https://images.unsplash.com/photo-1501973801540-537f08ccae7b"
-                    title="weather"
-                />
+            {/* Top Section */}
+            <div className="top">
+                <h2>{information.city}</h2>
+                <p className="condition">{information.weather}</p>
+            </div>
 
-                <CardContent>
-                    <Typography variant="h6">
-                        {information.city}
-                    </Typography>
+            {/* Temperature */}
+            <div className="temp-section">
+                <h1>{Math.round(information.temp)}°</h1>
+            </div>
 
-                    <Typography variant="h5">
-                        Temperature: {information.temp}°C
-                    </Typography>
+            {/* Bottom Glass Cards */}
+            <div className="bottom">
 
-                    <Typography variant="body2">
-                        Feels Like: {information.feelsLike}°C
-                        <br /><br />
-                        Min Temp: {information.tempmin}°C
-                        <br /><br />
-                        Max Temp: {information.tempmax}°C
-                        <br /><br />
-                        Humidity: {information.humidity}%
-                    </Typography>
-                </CardContent>
-            </Card>
+                <div className="card">
+                    <p>Feels Like</p>
+                    <h3>{information.feelsLike}°C</h3>
+                </div>
+
+                <div className="card">
+                    <p>Humidity</p>
+                    <h3>{information.humidity}%</h3>
+                </div>
+
+                <div className="card">
+                    <p>Min</p>
+                    <h3>{information.tempmin}°C</h3>
+                </div>
+
+                <div className="card">
+                    <p>Max</p>
+                    <h3>{information.tempmax}°C</h3>
+                </div>
+
+            </div>
         </div>
     );
 }
