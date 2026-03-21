@@ -1,15 +1,12 @@
-import SearchBox from './SearchBox';
-import InfoBox from './InfoBox.jsx';
+
+import Weatherapp from './Weatherapp.jsx';
 
 
 function App() {
   
 
   return (
-    <div>
-        <SearchBox />
-    <InfoBox />
-    </div>
+    <Weatherapp/>
   );
 }
 

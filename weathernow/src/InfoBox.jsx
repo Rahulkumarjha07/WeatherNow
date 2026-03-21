@@ -18,8 +18,8 @@ export default function InfoBox() {
 
     return (
         <div className="InfoBox">
-            <h1>Weather Info</h1>
-            <h2>Condition: {information.weather}</h2>
+          
+           
 
             <Card  className="weatherCard">
                 <CardMedia
